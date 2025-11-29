@@ -1,15 +1,15 @@
 import { initializeApp, getApps, getApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { ENV } from "@/lib/env";
 
-// Using your provided Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyBX3MLSytfncEuneoC9DZ5WyoZDSDxiLv8",
-  authDomain: "seicho-infofi.firebaseapp.com",
-  projectId: "seicho-infofi",
-  storageBucket: "seicho-infofi.firebasestorage.app",
-  messagingSenderId: "334123682300",
-  appId: "1:334123682300:web:c06573957b022ab3b20a79"
+  apiKey: ENV.FIREBASE_API_KEY,
+  authDomain: ENV.FIREBASE_AUTH_DOMAIN,
+  projectId: ENV.FIREBASE_PROJECT_ID,
+  storageBucket: ENV.FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: ENV.FIREBASE_MESSAGING_SENDER_ID,
+  appId: ENV.FIREBASE_APP_ID,
 };
 
 const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
