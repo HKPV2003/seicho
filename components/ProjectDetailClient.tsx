@@ -11,7 +11,7 @@ import {
   query,
   serverTimestamp
 } from "firebase/firestore";
-import { db } from "../lib/firebase";
+import { db } from "../config/firebase";
 import { useAuth } from "./AuthProvider";
 import type { Project } from "./ProjectsPage";
 import { LoginBlock } from "./LoginBlock";

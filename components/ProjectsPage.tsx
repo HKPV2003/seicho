@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { db } from "../lib/firebase";
+import { db } from "../config/firebase";
 import { useAuth } from "./AuthProvider";
 import { LoginBlock } from "./LoginBlock";
 
