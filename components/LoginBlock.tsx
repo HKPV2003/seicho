@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useAuth } from "./AuthProvider";
+import { FcGoogle } from "react-icons/fc";
 
 export const LoginBlock: React.FC = () => {
   const { loginWithGoogle, loading } = useAuth();
@@ -67,7 +68,7 @@ export const LoginBlock: React.FC = () => {
           boxShadow: "0 12px 30px rgba(59,130,246,0.5)"
         }}
       >
-        {loading ? "Checking session..." : "Continue with Google"}
+        {loading ? "Checking session..." : <p><FcGoogle />Continue with Google</p>}
       </button>
       <p
         style={{
